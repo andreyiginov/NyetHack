@@ -22,7 +22,11 @@ fun main(args: Array<String>) {
     }
 
     // Player Status
-    println("(Aura: $auraColor) " +
-            "(Blessed: ${if (isBlessed) "YES" else "NO"})")
-    println("$name $healthStatus")
+    val HP = healthPoints
+    val A = auraColor
+    val B = if (isBlessed) "YES" else "NO"
+    val H = name + " " + healthStatus
+
+    val playerStatus = "(HP: $HP) (Aura: $A) (Blessed: $B) -> $H"
+    println(playerStatus)
 }
